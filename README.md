@@ -21,9 +21,8 @@
 
 ## Introduction
 
-Recent lab exercises @hogent triggered my curiosity.  I know that containers run isolated, but differently than by virtualizing hardware.  They share resources with the host and are more lightweight than virtual machines.  The filesystem of a container is layered with overlayfs, at least for Docker (OverlayFS / overlayfs2).  That's pretty much it.  Pretty vague.
 
-After looking around a bit, I came to understand that it's a matter of a handful of kernel features: cgroups, namespaces, unshare, pivot_root, ...
+Containers are a matter of a handful of kernel features: cgroups, namespaces, unshare, pivot_root, ...
 
 - cgroups ([linux control groups](https://man7.org/linux/man-pages/man7/cgroups.7.html)): handle resources and limits
 - namespaces ([linux namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html)) with CLONE flags: manage the isolation
